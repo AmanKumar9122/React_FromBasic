@@ -1,5 +1,6 @@
 // core javascript stuff 
 import Header from "./Header"
+import Login,{Profile} from "./UserComponent"
 function App(){
   return(
 
@@ -7,6 +8,8 @@ function App(){
     // For using multiple h1 tags we need to wrap them inside a div element.
 
     <div>
+      <Login />
+      <Profile />
       <Header />
       <h1>Hello React</h1>
       <h1>Code by Aman Kumar</h1>
