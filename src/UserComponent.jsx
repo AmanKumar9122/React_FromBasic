@@ -15,3 +15,6 @@ export function Profile(){
 }
 
 export default Login
+
+// use of default to export statement 
+// only one Component can be exported using default statement

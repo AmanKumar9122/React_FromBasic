@@ -1,6 +1,11 @@
 // core javascript stuff 
 import Header from "./Header"
 import Login,{Profile} from "./UserComponent"
+
+// if a component is exported using default statement then we directly
+// import it. If it is exported with default export then it is imported
+// with the help of {}.
+
 function App(){
   return(
 
