@@ -1,5 +1,6 @@
 // core javascript stuff 
 import Header from "./Header"
+import ToDo from "./Todo"
 import Login,{Profile} from "./UserComponent"
 //import React from 'react'; // without jsx we have to import react  
 
@@ -7,22 +8,23 @@ import Login,{Profile} from "./UserComponent"
 // import it. If it is exported with default export then it is imported
 // with the help of {}.
 
-// function App(){
-//   return(
+function App(){
+  return(
 
-//     // on removing div it's showing error.
-//     // For using multiple h1 tags we need to wrap them inside a div element.
+    // on removing div it's showing error.
+    // For using multiple h1 tags we need to wrap them inside a div element.
 
-//     <div>
-//       <Login />
-//       <Profile />
-//       <Header />
-//       <h1>Hello React</h1>
-//       <h1>Code by Aman Kumar</h1>
+    <div>
+      {/* <Login />
+      <Profile />
+      <Header />
+      <h1>Hello React</h1>
+      <h1>Code by Aman Kumar</h1> */}
+      <ToDo />
 
-//     </div>
-//   )
-// }
+    </div>
+  )
+}
 
 
 // With JSX
