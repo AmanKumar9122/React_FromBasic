@@ -71,4 +71,6 @@ export default App
 // As html tags are written in small letters. So react consider functions with capital letter as 
 // its component.
 
+// jsx full form is not stated well in official web site as well as 
+// other site somewhere it is javascript syntax extension / javascript xml
 
