@@ -120,19 +120,19 @@ import Login, { Profile } from "./UserComponent";
 // Using HTML Tag Attributes with JSX
 // JSX also allows you to use dynamic values inside tag properties such as value, id, or src.
 
-function App() {
-  const name = "peter";
-  let path =
-    "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2018/4/10/1/HBFB1406_180126_dog-on-rug_041.jpg.rend.hgtvcom.616.822.suffix/1523383802334.jpeg";
+// function App() {
+//   const name = "peter";
+//   let path =
+//     "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2018/4/10/1/HBFB1406_180126_dog-on-rug_041.jpg.rend.hgtvcom.616.822.suffix/1523383802334.jpeg";
 
-  return (
-    <div>
-      <input type="text" value={name} id={name} />
-      <br />
-      <img src={path} />
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <input type="text" value={name} id={name} />
+//       <br />
+//       <img src={path} />
+//     </div>
+//   );
+// }
 
 // With JSX
 
@@ -169,6 +169,75 @@ function App() {
 //     )
 //   );
 // }
+
+function App() {
+  // function callFun(){
+  //     alert("Hii!")
+  // }
+  // we don't need to define the function and then call it seperately
+  // it will get called again and again
+
+  const fruit=(name)=>{
+    alert("apple")
+  }
+
+  return (
+    <div>
+      <h1>Event and function call</h1>
+      <button
+        // onClick={function callFun() {
+        //   alert("Hii!");
+        // }}
+
+        onClick={()=>fruit("apple")}>Apple
+
+        {/* onClick={fruit}
+         Here we are writing the function and function will get called automatically 
+    
+         Then how to pass the parameters in function if we can't use ()
+         We call double function one inside another so that we write the outer 
+         function and it call the inner one.
+
+         
+         */}
+
+
+        {/* it is needed to define function inside {} so that it works properly */}
+
+      </button>
+    </div>
+  );
+}
+
+
+// const fruit = (name) => {
+//   alert("apple");
+// }
+
+// function App() {
+//   const fruit = (name) => {
+//     alert("banana"); 
+//   }
+
+//   return (
+//     <div>
+//       <h1>Event and function call</h1>
+//       <button onClick={() => fruit("apple")}>Apple</button>
+//     </div>
+//   );
+// }
+
+// Which function gets called onClick?
+// The inner fruit function inside App is the one that gets called.
+
+// What will happen when you click the button?
+// It will show an alert with the text "banana" because the inner
+// function takes precedence over the outer one in the same scope.
+
+// Even though you're passing "apple" as the argument
+// (fruit("apple")), the argument isn't being used inside
+// the function — it always alerts "banana".
+
 
 export default App;
 
