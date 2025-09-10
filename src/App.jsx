@@ -6,20 +6,34 @@ import Login,{Profile} from "./UserComponent"
 // import it. If it is exported with default export then it is imported
 // with the help of {}.
 
+// function App(){
+//   return(
+
+//     // on removing div it's showing error.
+//     // For using multiple h1 tags we need to wrap them inside a div element.
+
+//     <div>
+//       <Login />
+//       <Profile />
+//       <Header />
+//       <h1>Hello React</h1>
+//       <h1>Code by Aman Kumar</h1>
+
+//     </div>
+//   )
+// }
+
 function App(){
+  const username = "Aman Kumar";
+  let x = 20;
+  let y = 30;
   return(
-
-    // on removing div it's showing error.
-    // For using multiple h1 tags we need to wrap them inside a div element.
-
-    <div>
-      <Login />
-      <Profile />
-      <Header />
-      <h1>Hello React</h1>
-      <h1>Code by Aman Kumar</h1>
-
-    </div>
+    <>
+    <h1>{username}</h1>
+    <h1>{10+20+30}</h1>
+    <h1>{x+y}</h1>
+    <button onClick={()=>alert("hello")}>Click Me</button>
+    </>
   )
 }
 
