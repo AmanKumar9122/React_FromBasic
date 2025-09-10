@@ -1,6 +1,7 @@
 // core javascript stuff 
 import Header from "./Header"
 import Login,{Profile} from "./UserComponent"
+//import React from 'react'; // without jsx we have to import react  
 
 // if a component is exported using default statement then we directly
 // import it. If it is exported with default export then it is imported
@@ -23,19 +24,44 @@ import Login,{Profile} from "./UserComponent"
 //   )
 // }
 
-function App(){
-  const username = "Aman Kumar";
-  let x = 20;
-  let y = 30;
-  return(
-    <>
-    <h1>{username}</h1>
-    <h1>{10+20+30}</h1>
-    <h1>{x+y}</h1>
-    <button onClick={()=>alert("hello")}>Click Me</button>
-    </>
-  )
-}
+
+// With JSX
+
+// function App(){
+//   const username = "Aman Kumar";
+//   let x = 20;
+//   let y = 30;
+//   return(
+//     <>
+//     <h1>{username}</h1>
+//     <h1>{10+20+30}</h1>
+//     <h1>{x+y}</h1>
+//     <button onClick={()=>alert("hello")}>Click Me</button>
+//     </>
+//   )
+// }
+
+// without jsx
+// function App() {
+//   const username = "Aman Kumar";
+//   let x = 20;
+//   let y = 30;
+
+//   return React.createElement(
+//     React.Fragment,
+//     null,
+//     React.createElement("h1", null, username),
+//     React.createElement("h1", null, 10 + 20 + 30),
+//     React.createElement("h1", null, x + y),
+//     React.createElement(
+//       "button",
+//       { onClick: () => alert("hello") },
+//       "Click Me"
+//     )
+//   );
+// }
+
+
 
 export default App
 
