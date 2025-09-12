@@ -5,31 +5,33 @@ import ToDo from "./Todo";
 import Login, { Profile } from "./UserComponent";
 //import React from 'react'; // without jsx we have to import react
 import { useState } from "react";
+import User from "./User";
+
 
 // if a component is exported using default statement then we directly
 // import it. If it is exported with default export then it is imported
 // with the help of {}.
 
-function App(){
-  return(
+// function App(){
+//   return(
 
-    // on removing div it's showing error.
-    // For using multiple h1 tags we need to wrap them inside a div element.
+//     // on removing div it's showing error.
+//     // For using multiple h1 tags we need to wrap them inside a div element.
 
-    <div>
-      {/* <Login />
-      <Profile />
-      <Header />
-      <h1>Hello React</h1>
-      <h1>Code by Aman Kumar</h1> */}
-      {/* <ToDo /> */}
-      <Counter />    
-      {/* Using State in a Different Component
-          Create a New Component (e.g., Counter.jsx) */}
+//     <div>
+//       {/* <Login />
+//       <Profile />
+//       <Header />
+//       <h1>Hello React</h1>
+//       <h1>Code by Aman Kumar</h1> */}
+//       {/* <ToDo /> */}
+//       <Counter />    
+//       {/* Using State in a Different Component
+//           Create a New Component (e.g., Counter.jsx) */}
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
 // function App() {
 //   const name = "Aman Kumar";
@@ -264,11 +266,47 @@ function App(){
 
 
 
+
+// Step-by-Step: Toggle Text Example
+
+// function App() {
+//   const [display, setDisplay] = useState(true);
+
+//   return (
+//     <div>
+//       <h1>Toggle in React JS</h1>
+//       <button onClick={() => setDisplay(!display)}>Toggle</button>
+//       {display ? <h1>Aman Kumar</h1> : null}
+//     </div>
+//   );
+// }
+
+
+// Explanation:
+// We import useState to handle the toggle.
+// display is a boolean value (true or false).
+// On button click, we change the value of display.
+// The heading will be shown only if display is true.
+
+
+function App() {
+  const [display, setDisplay] = useState(true);
+
+  return (
+    <div>
+      <h1>Toggle in React JS</h1>
+      <button onClick={() => setDisplay(!display)}>Toggle</button>
+      {display ? <User /> : null}
+    </div>
+  );
+}
+
+// What’s Happening:
+// User component is conditionally rendered using {display ? <User /> : null}.
+// On clicking the Toggle button, the component appears or disappears.
+
+
 export default App;
-
-
-
-
 
 // work of react it to write html code in javascript file and render it over browser
 

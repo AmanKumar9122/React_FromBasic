@@ -31,3 +31,9 @@ const Counter = () => {
 };
 
 export default Counter;
+
+
+// useState lets you manage dynamic values in your UI.
+// React re-renders the component every time you call the update function.
+// You can use multiple state values in a single component.
+// State makes your React components interactive and responsive.
