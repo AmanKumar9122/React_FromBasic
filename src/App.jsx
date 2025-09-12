@@ -3,6 +3,7 @@ import Header from "./Header";
 import ToDo from "./Todo";
 import Login, { Profile } from "./UserComponent";
 //import React from 'react'; // without jsx we have to import react
+import { useState } from "react";
 
 // if a component is exported using default statement then we directly
 // import it. If it is exported with default export then it is imported
@@ -170,45 +171,23 @@ import Login, { Profile } from "./UserComponent";
 //   );
 // }
 
-function App() {
-  // function callFun(){
-  //     alert("Hii!")
-  // }
-  // we don't need to define the function and then call it seperately
-  // it will get called again and again
+// 
 
-  const fruit=(name)=>{
-    alert("apple")
-  }
+function App() {
+  const [fruit, setFruit] = useState("Apple");
+
+  const handleFruit = () => {
+    setFruit("Banana");
+  };
 
   return (
     <div>
-      <h1>Event and function call</h1>
-      <button
-        // onClick={function callFun() {
-        //   alert("Hii!");
-        // }}
-
-        onClick={()=>fruit("apple")}>Apple
-
-        {/* onClick={fruit}
-         Here we are writing the function and function will get called automatically 
-    
-         Then how to pass the parameters in function if we can't use ()
-         We call double function one inside another so that we write the outer 
-         function and it call the inner one.
-
-         
-         */}
-
-
-        {/* it is needed to define function inside {} so that it works properly */}
-
-      </button>
+      <h1>State in React JS</h1>
+      <h2>{fruit}</h2>
+      <button onClick={handleFruit}>Change Fruit Name</button>
     </div>
   );
 }
-
 
 // const fruit = (name) => {
 //   alert("apple");
