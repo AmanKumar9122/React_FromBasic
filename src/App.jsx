@@ -189,6 +189,31 @@ function App() {
   );
 }
 
+// State in react js
+// State is like a variable but smarter.
+// It stores dynamic data and automatically re-renders the component whenever the state changes.
+// React does not understand normal JavaScript variables for UI updates.
+// If you want to update and reflect values in the UI, use state.
+
+// State = Data Container
+// State is mutable (it can change).
+// It allows React components to keep track of data that changes over time.
+// React will automatically update the UI when the state value changes.
+
+// Hooks in React
+// Hooks are special functions that let you use React features in functional components.
+
+// With hooks, you can use:
+// State (useState)
+// Lifecycle methods (useEffect)
+// Other advanced features
+
+
+
+
+
+
+
 // const fruit = (name) => {
 //   alert("apple");
 // }
