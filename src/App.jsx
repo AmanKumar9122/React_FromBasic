@@ -1,4 +1,5 @@
 // core javascript stuff
+import Counter from "./Counter";
 import Header from "./Header";
 import ToDo from "./Todo";
 import Login, { Profile } from "./UserComponent";
@@ -9,23 +10,26 @@ import { useState } from "react";
 // import it. If it is exported with default export then it is imported
 // with the help of {}.
 
-// function App(){
-//   return(
+function App(){
+  return(
 
-//     // on removing div it's showing error.
-//     // For using multiple h1 tags we need to wrap them inside a div element.
+    // on removing div it's showing error.
+    // For using multiple h1 tags we need to wrap them inside a div element.
 
-//     <div>
-//       {/* <Login />
-//       <Profile />
-//       <Header />
-//       <h1>Hello React</h1>
-//       <h1>Code by Aman Kumar</h1> */}
-//       <ToDo />
+    <div>
+      {/* <Login />
+      <Profile />
+      <Header />
+      <h1>Hello React</h1>
+      <h1>Code by Aman Kumar</h1> */}
+      {/* <ToDo /> */}
+      <Counter />    
+      {/* Using State in a Different Component
+          Create a New Component (e.g., Counter.jsx) */}
 
-//     </div>
-//   )
-// }
+    </div>
+  )
+}
 
 // function App() {
 //   const name = "Aman Kumar";
@@ -171,23 +175,10 @@ import { useState } from "react";
 //   );
 // }
 
-// 
 
-function App() {
-  const [fruit, setFruit] = useState("Apple");
 
-  const handleFruit = () => {
-    setFruit("Banana");
-  };
 
-  return (
-    <div>
-      <h1>State in React JS</h1>
-      <h2>{fruit}</h2>
-      <button onClick={handleFruit}>Change Fruit Name</button>
-    </div>
-  );
-}
+
 
 // State in react js
 // State is like a variable but smarter.
@@ -207,6 +198,33 @@ function App() {
 // State (useState)
 // Lifecycle methods (useEffect)
 // Other advanced features
+
+
+
+
+// Use State
+// function App() {
+//   const [fruit, setFruit] = useState("Apple");
+
+//   const handleFruit = () => {
+//     setFruit("Banana");
+//   };
+
+//   return (
+//     <div>
+//       <h1>State in React JS</h1>
+//       <h2>{fruit}</h2>
+//       <button onClick={handleFruit}>Change Fruit Name</button>
+//     </div>
+//   );
+// }
+
+// Explanation:
+// fruit is the current value.
+// setFruit is the function to update the value.
+// Clicking the button changes "Apple" to "Banana" and updates the UI.
+
+
 
 
 
@@ -243,7 +261,14 @@ function App() {
 // the function — it always alerts "banana".
 
 
+
+
+
 export default App;
+
+
+
+
 
 // work of react it to write html code in javascript file and render it over browser
 
